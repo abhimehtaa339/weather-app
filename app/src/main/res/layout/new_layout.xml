@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <com.google.android.material.card.MaterialCardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="12dp"
+        android:backgroundTint="#373737"
+        app:cardElevation="3dp"
+        app:cardCornerRadius="12dp"
+        android:animationCache="true">
+
+        <TextView
+            android:id="@+id/contactname"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="12dp"
+            android:text = "contact name"
+            android:textColor="#fafafa"
+            android:textStyle="bold"
+            android:textSize="23sp"/>
+
+
+        <TextView
+            android:id="@+id/contactnumber"
+            android:layout_marginTop="34dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="12dp"
+            android:text = "contact name"
+            android:textColor="#fafafa"
+            android:textSize="18sp"/>
+
+    </com.google.android.material.card.MaterialCardView>
+
+</LinearLayout>
