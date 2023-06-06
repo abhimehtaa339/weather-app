@@ -1,15 +1,12 @@
 package com.example.calculator.weather;
 
 
-import android.util.Log;
-
 public class weather_modal {
 
-    private String temprature , icon , windspeed , time;
+    private String temprature , windspeed , time;
 
-    public weather_modal(String temprature, String icon, String windspeed, String time) {
+    public weather_modal(String temprature, String icon, String windspeed) {
         this.temprature = temprature;
-        this.icon = icon;
         this.windspeed = windspeed;
         this.time = time;
     }
@@ -23,13 +20,8 @@ public class weather_modal {
         this.temprature = temprature;
     }
 
-    public String getIcon() {
-        return icon;
-    }
 
-    public void setIcon(String icon) {
-        this.icon = icon;
-    }
+
 
     public String getWindspeed() {
         return windspeed;

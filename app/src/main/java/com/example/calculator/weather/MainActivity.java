@@ -161,7 +161,6 @@ public class MainActivity extends AppCompatActivity {
         RequestQueue requestQueue = Volley.newRequestQueue(getApplicationContext());
 
         JsonObjectRequest obj = new JsonObjectRequest(Request.Method.GET, url, null, new Response.Listener<JSONObject>() {
-            @SuppressLint("NotifyDataSetChanged")
             @Override
             public void onResponse(JSONObject response) {
 
@@ -187,15 +186,16 @@ public class MainActivity extends AppCompatActivity {
                         JSONObject hourObj = hourarray.getJSONObject(i);
                         String time = hourObj.getString("time");
                         String tempure = hourObj.getString("temp_c");
-                        String img = hourObj.getJSONObject("conditon").getString("icon");
                         String wind = hourObj.getString("wind_kph");
-                        arr.add(new weather_modal(time , tempure , img , wind));
+                        arr.add(new weather_modal(time , tempure , wind));
                     }
 
                         adapt.notifyDataSetChanged();
 
                 }catch (Exception e){
-                    e.printStackTrace();
+                    Toast.makeText(MainActivity.this, "plese ", Toast.LENGTH_SHORT).show();
+                    String ext = e.toString();
+                    Log.d("ttss" , ext);
                 }
 
             }
